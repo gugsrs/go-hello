@@ -1,2 +1,2 @@
 # go-hello
-Hello world GoLang
+Simple go applications
