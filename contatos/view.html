@@ -1,0 +1,19 @@
+<h1>Lista de Contatos</h1>
+<form action="/search/{{.Title}}" method="POST">
+		<div>Buscar Contato: <input type="text" name="contactName"></div>
+		<div><input type="submit" value="Buscar"></div>
+		<br>
+</form>
+<div>
+	{{ range $index, $contact := .Contacts }}
+	<div>	
+		{{ $contact }}
+		{{ if $contact }}
+		<form action="/delete/{{$index}}" method="GET">
+			<input type="submit" value="Excluir Contato">
+		</form>
+		{{end}}
+	</div>
+	{{end}}
+</div>
+<p><a href="/edit/add">Adicionar Contato</a></p>

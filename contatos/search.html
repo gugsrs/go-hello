@@ -1,0 +1,9 @@
+<h1>Buscando Contatos</h1>
+<div>
+	{{ range $index, $contact := .Contacts }}
+	<div>	
+		{{ $contact }}
+	</div>
+	{{end}}
+</div>
+<p><a href="/view/Lista">Voltar</a></p>
